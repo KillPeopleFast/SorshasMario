@@ -90,7 +90,7 @@ int main()
 	int state = INTRO;
 	int coins = 0;
 	double time = 1000;
-
+	int lives = 3;
 	//create variables to hold background
 	ALLEGRO_BITMAP *background = NULL;
 	//these two variables hold the x and y positions of the player
@@ -98,8 +98,8 @@ int main()
 	float player_x = 50;
 	float player_y = 50;
 
-	float Plat1x = 100;
-	float Plat1y = 400;
+//	float Plat1x = 100;
+//	float Plat1y = 400;
 
 	// velocity (in x and y, which means the speed we're going in each orthogonal direction)
 	float dx = 0;
@@ -180,7 +180,7 @@ int main()
 
 	al_attach_sample_instance_to_mixer(instance3, al_get_default_mixer());
 
-	al_play_sample_instance(instance3);
+	//al_play_sample_instance(instance3);
 
 	al_clear_to_color(al_map_rgb(255, 255, 255));
 
@@ -210,94 +210,94 @@ int main()
 	al_start_timer(timer);
 
 	Bricks brick1;
-	brick1.initBrick(840, 408, 46, 46);
+	brick1.initBrick(1020, 408, 58, 43);
 	Bricks brick2;
-	brick2.initBrick(940, 408, 46, 46);
+	brick2.initBrick(1123, 408, 58, 43);
 	Bricks brick3;
-	brick3.initBrick(840, 408, 46, 46);
+	brick3.initBrick(1226, 408, 58, 43);
 	Bricks brick4;
-	brick4.initBrick(840, 408, 46, 46);
+	brick4.initBrick(3920, 408, 58, 43);
 	Bricks brick5;
-	brick5.initBrick(840, 408, 46, 46);
+	brick5.initBrick(3975, 408, 58, 43);
 	Bricks brick6;
-	brick6.initBrick(840, 408, 46, 46);
+	brick6.initBrick(4023, 408, 58, 43);
 	Bricks brick7;
-	brick7.initBrick(840, 408, 46, 46);
+	brick7.initBrick(4061, 218, 58, 43);
 	Bricks brick8;
-	brick8.initBrick(840, 408, 46, 46);
+	brick8.initBrick(4113, 218, 58, 43);
 	Bricks brick9;
-	brick9.initBrick(840, 408, 46, 46);
+	brick9.initBrick(4165, 218, 58, 43);
 	Bricks brick10;
-	brick10.initBrick(840, 408, 46, 46);
+	brick10.initBrick(4217, 218, 58, 43);
 	Bricks brick11;
-	brick11.initBrick(840, 408, 46, 46);
+	brick11.initBrick(4269, 218, 58, 43);
 	Bricks brick12;
-	brick12.initBrick(840, 408, 46, 46);
+	brick12.initBrick(4321, 218, 58, 43);
 	Bricks brick13;
-	brick13.initBrick(840, 408, 46, 46);
+	brick13.initBrick(4373, 218, 58, 43);
 	Bricks brick14;
-	brick14.initBrick(840, 408, 46, 46);
+	brick14.initBrick(4425, 218, 58, 43);
 	Bricks brick15;
-	brick15.initBrick(840, 408, 46, 46);
+	brick15.initBrick(4639, 218, 58, 43);
 	Bricks brick16;
-	brick16.initBrick(840, 408, 46, 46);
+	brick16.initBrick(4691, 218, 58, 43);
 	Bricks brick17;
-	brick17.initBrick(840, 408, 46, 46);
+	brick17.initBrick(4744, 218, 58, 43);
 	Bricks brick18;
-	brick18.initBrick(840, 408, 46, 46);
+	brick18.initBrick(4791, 411, 58, 43);
 	Bricks brick19;
-	brick19.initBrick(840, 408, 46, 46);
+	brick19.initBrick(5096, 411, 58, 43);
 	Bricks brick20;
-	brick20.initBrick(840, 408, 46, 46);
+	brick20.initBrick(5397, 411, 58, 43);
 	Bricks brick21;
-	brick21.initBrick(840, 408, 46, 46);
+	brick21.initBrick(5401, 411, 58, 43);
 	Bricks brick22;
-	brick22.initBrick(840, 408, 46, 46);
+	brick22.initBrick(6008, 411, 58, 43);
 	Bricks brick23;
-	brick23.initBrick(840, 408, 46, 46);
+	brick23.initBrick(6568, 411, 58, 43);
 	Bricks brick24;
-	brick24.initBrick(840, 408, 46, 46);
+	brick24.initBrick(6620, 411, 58, 43);
 	Bricks brick25;
-	brick25.initBrick(840, 408, 46, 46);
+	brick25.initBrick(6163, 222, 58, 43);
 	Bricks brick26;
-	brick26.initBrick(840, 408, 46, 46);
+	brick26.initBrick(6215, 222, 58, 43);
 	Bricks brick27;
-	brick27.initBrick(840, 408, 46, 46);
+	brick27.initBrick(6267, 222, 58, 43);
 	Bricks brick28;
-	brick28.initBrick(840, 408, 46, 46);
+	brick28.initBrick(6523, 219, 58, 43);
 	Bricks brick29;
-	brick29.initBrick(840, 408, 46, 46);
+	brick29.initBrick(6669, 218, 58, 43);
 	Bricks brick30;
-	brick30.initBrick(840, 408, 46, 46);
+	brick30.initBrick(8557, 411, 58, 43);
 	Bricks brick31;
-	brick31.initBrick(840, 408, 46, 46);
+	brick31.initBrick(8610, 411, 58, 43);
 	/////i do the rest
 	Bricks brick32;
-	brick32.initBrick(840, 408, 46, 46);
+	brick32.initBrick(8712, 411, 58, 43);
 	Bricks brick33;
-	brick33.initBrick(840, 408, 46, 46);
+	brick33.initBrick(840, 408, 58, 43);
 	Bricks brick34;
-	brick34.initBrick(840, 408, 46, 46);
+	brick34.initBrick(840, 408, 58, 43);
 	Bricks brick35;
-	brick35.initBrick(840, 408, 46, 46);
+	brick35.initBrick(840, 408, 58, 43);
 	Bricks brick36;
-	brick36.initBrick(840, 408, 46, 46);
+	brick36.initBrick(840, 408, 58, 43);
 	Bricks brick37;
-	brick37.initBrick(840, 408, 46, 46);
+	brick37.initBrick(840, 408, 58, 43);
 	Bricks brick38;
-	brick38.initBrick(840, 408, 46, 46);
+	brick38.initBrick(840, 408, 58, 43);
 	Bricks brick39;
-	brick39.initBrick(840, 408, 46, 46);
+	brick39.initBrick(840, 408, 58, 43);
 	Bricks brick40;
-	brick40.initBrick(840, 408, 46, 46);
+	brick40.initBrick(840, 408, 58, 43);
 	Bricks brick41;
-	brick41.initBrick(840, 408, 46, 46);
+	brick41.initBrick(840, 408, 58, 43);
 	Bricks brick42;
-	brick42.initBrick(840, 408, 46, 46);
+	brick42.initBrick(840, 408, 58, 43);
 	Bricks brick43;
-	brick43.initBrick(840, 408, 46, 46);
+	brick43.initBrick(840, 408, 58, 43);
 	Bricks brick44;
-	brick44.initBrick(10400, 408, 46, 46);
+	brick44.initBrick(10400, 408, 58, 43);
 
 	//so the game loop is set to act on "ticks" of the timer OR keyboard presses 
 	//OR the mouse closing the display
@@ -373,7 +373,7 @@ int main()
 
 				if (key[KEY_RIGHT] && player_x <= worldwidth - player_SIZE - 4.0 && !isPaused) {
 					direction = 'r';
-					player_x += 4.0;
+					player_x += 20.0;
 					dx = 2;
 				}
 
@@ -410,11 +410,11 @@ int main()
 				//if (playerCollidedWithPlatform(player_x, player_y, 32, 32, Plat1x, 80, Plat1y)) {
 
 				//	}
-				if (collision(player_x, player_y, 62, 62, Plat1x, Plat1y, 40, 40)) {
+				//if (collision(player_x, player_y, 62, 62, Plat1x, Plat1y, 40, 40)) {
 					//player_x = 480 - 30;//you're warping here
-					dy = 0;
-					isOnSolidGround = true;
-				}
+				//	dy = 0;
+				//	isOnSolidGround = true;
+				//}
 
 
 				//collision code use later
